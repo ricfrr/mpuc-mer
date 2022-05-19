@@ -1,0 +1,30 @@
+dataset:
+    path_train : "/path/to/train"
+    path_test : "/path/to/test"
+    path_valid : "/path/to/validation"
+    n_frames: 30
+    classes : 6
+    text: True 
+    video: True 
+    audio: True 
+    graph: True 
+
+
+model_params:
+    out_feat: 512
+    backbone: "STCGN"
+    adj_matr : "/path/to/adj.npy"
+
+training:
+    lr_encoder : 0.001
+    lr_linear : 0.001
+    batch_size : 32    
+    scheduler_step :  5
+    scheduler_gamma : 0.9    
+    wd : 0.001
+    momentum : 0.9
+    epochs : 2000
+    patience : 50
+    num_workers : 2
+    contrastive: True
+    unsupervised: True

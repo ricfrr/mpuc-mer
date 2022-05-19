@@ -1,0 +1,31 @@
+dataset:
+    path : "/path/to/ravdess/"
+    path_audio : "/path/to/ravdess_audio"
+    n_frames: 90
+    n_mels : 128
+    classes : 8
+    actor_split: True 
+    text: False 
+    video: False 
+    audio: True 
+    graph: True 
+    split_percentage: 0.9
+
+model_params:
+    out_feat: 512
+    backbone: "STCGN"
+    adj_matr : "/path/to/adj.npy"
+
+training:
+    lr_encoder : 0.001
+    lr_linear : 0.001
+    batch_size : 32          
+    wd : 0.001
+    scheduler_step :  100
+    scheduler_gamma : 0.9    
+    momentum : 0.9
+    patience : 100
+    epochs : 2000
+    num_workers : 6
+    contrastive: True
+    unsupervised: False
