@@ -12,18 +12,15 @@ Official implementation of "Multimodal Emotion Recognition with Modality-Pairwis
 
 > **Abstract:** Emotion recognition is involved in several real-world applications. With an increase in available modalities, automatic understanding of emotions is being performed more accurately. The success in Multimodal Emotion Recognition (MER), primarily relies on the supervised learning paradigm. However, data annotation is expensive, time-consuming, and as emotion expression and perception depends on several factors (e.g., age, gender, culture) 
 obtaining labels with a high reliability is hard. Motivated by these, we focus on unsupervised feature learning for MER. 
-%The emotions are represented as discrete categories (such as angry and happy) while as the multimodal data text, acoustic and vision are used. 
 We consider discrete emotions, and as modalities text, audio and vision are used.
 Our method, as being based on contrastive loss between pairwise modalities, is the first attempt in MER literature. Our end-to-end feature learning approach has several differences (and advantages) compared to existing MER methods: 
-i) it is unsupervised, so the learning is lack of data labelling cost; ii) it does not require data spatial augmentation, modality alignment, large number of batch size or epochs; iii) it applies data fusion only at inference; and iv) it does not require backbones pre-trained on emotion recognition task. The experiments on benchmark datasets show that our method outperforms several baseline approaches and unsupervised learning methods applied in MER. %Although performing unsupervised feature learning, 
+i) it is unsupervised, so the learning is lack of data labelling cost; ii) it does not require data spatial augmentation, modality alignment, large number of batch size or epochs; iii) it applies data fusion only at inference; and iv) it does not require backbones pre-trained on emotion recognition task. The experiments on benchmark datasets show that our method outperforms several baseline approaches and unsupervised learning methods applied in MER.  
 Particularly, it even surpasses a few supervised MER state-of-the-art.
-
-
 <br>
 <p align="center">
     <img src="./images/pairwise-unsup-contrastive.png" width=70%> <br />
     <em>
-    A visual comparison of our UNified Objective (UNO) with previous works.
+    <strong>Summary of our approach.</strong>. We first learn the multimodal features in an unsupervised fashion, then the downstream task (discrete emotion recognition) is performed. We jointly train, each possible pair of modalities' backbone using contrastive loss in order to predict the correct pairings of a batch of training examples. The final loss is the average of all losses calculated. During inference, f_t, f_a, f_v, f_l are extracted before the projection layers (i.e., fc+RELU+fc) and concatenated, then feed to a linear classifier for emotion recognition.
     </em>
 </p>
 <br>
