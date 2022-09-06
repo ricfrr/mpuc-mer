@@ -104,10 +104,13 @@ dataset:
 # Citation
 If you like our work, please cite our paper:
 ```
-@InProceedings{paper,
-    author    = {Riccardo Franceschini, Enrico Fini, Cigdem Beyan, Alessandro Conti, Federica Arrigoni, and Elisa Ricci},
-    title     = {Multimodal Emotion Recognition with Modality-Pairwise Unsupervised Contrastive Loss},
-    booktitle = {Proceedings of the IAPR International Conference on Pattern Recognition (ICPR)},
-    year      = {2022}
+@misc{https://doi.org/10.48550/arxiv.2207.11482,
+  doi = {10.48550/ARXIV.2207.11482},
+  url = {https://arxiv.org/abs/2207.11482},
+  author = {Franceschini, Riccardo and Fini, Enrico and Beyan, Cigdem and Conti, Alessandro and Arrigoni, Federica and Ricci, Elisa},
+  keywords = {Computer Vision and Pattern Recognition (cs.CV), Artificial Intelligence (cs.AI), Machine Learning (cs.LG), Multimedia (cs.MM), FOS: Computer and information sciences, FOS: Computer and information sciences},
+  title = {Multimodal Emotion Recognition with Modality-Pairwise Unsupervised Contrastive Loss},
+  publisher = {arXiv},
+  year = {2022},  
 }
 ```
